@@ -36,20 +36,22 @@ const CartItem = props => {
                 <h1 className="cart-item-title-style">{foodType}</h1>
               </div>
               <div className="increment-decrement-container cart-items-button-set">
-                <div className="add-increment-decrement">
-                  <GrFormSubtract
-                    className="add-sub-icons"
-                    key={id}
-                    onClick={onDecrementCount}
-                  />
-                </div>
+                <button
+                  type="button"
+                  className="add-increment-decrement"
+                  key={id}
+                  onClick={onDecrementCount}
+                >
+                  <GrFormSubtract className="add-sub-icons" />
+                </button>
                 <span className="quantity-style">{quantity}</span>
-                <div className="add-increment-decrement">
-                  <AiOutlinePlus
-                    className="add-sub-icons"
-                    onClick={onIncrementCount}
-                  />
-                </div>
+                <button
+                  type="button"
+                  onClick={onIncrementCount}
+                  className="add-increment-decrement"
+                >
+                  <AiOutlinePlus className="add-sub-icons" />
+                </button>
               </div>
               <p className="cartitem-bill">
                 <BiRupee />

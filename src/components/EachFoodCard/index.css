@@ -1,0 +1,133 @@
+.each-food-card-container {
+  list-style-type: none;
+  width: 430px;
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+  margin-bottom: 15px;
+  padding: 5px;
+  transform: scaleY(1);
+}
+.card-image {
+  width: 55%;
+  height: 165px;
+  border-radius: 6px;
+  margin-right: 15px;
+}
+.food-card-title {
+  font-family: 'Roboto';
+  font-size: 18px;
+  font-weight: 600;
+  color: #334155;
+}
+.food-card-para-style {
+  display: flex;
+  align-items: center;
+  font-family: 'Roboto';
+  font-size: 16px;
+  font-weight: 500;
+  color: #334155;
+}
+.food-card-rating-symbol {
+  color: #ffcc00;
+  margin-right: 6px;
+}
+.food-card-add {
+  padding: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  font-family: 'Roboto';
+  border: 2px solid #ffa412;
+  border-radius: 4px;
+  color: #ffa412;
+  cursor: pointer;
+  outline: none;
+  margin-top: 0px;
+  margin-bottom: 5px;
+}
+.increment-decrement-container {
+  display: flex;
+  align-items: center;
+}
+.add-increment-decrement {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  padding: 5px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  color: #475569;
+  cursor: pointer;
+  outline: none;
+  border: 2px solid #475569;
+  border-radius: 3px;
+}
+.add-sub-icons {
+  color: #475569;
+  height: 15px;
+  width: 15px;
+}
+.quantity-style {
+  font-family: 'Roboto';
+  font-size: 16px;
+  margin-left: 7px;
+  margin-right: 7px;
+  font-weight: 500;
+}
+.each-food-card-container:hover {
+  transform: scaleY(1.02);
+}
+
+@media screen and (min-width: 1150px) and (max-width: 1402px) {
+  .each-food-card-container {
+    width: 32%;
+    padding: 0px;
+    margin-bottom: 18px;
+  }
+  .card-image {
+    width: 55%;
+    height: 160px;
+    border-radius: 6px;
+    margin-right: 15px;
+  }
+}
+@media screen and (min-width: 901px) and (max-width: 1150px) {
+  .each-food-card-container {
+    width: 47%;
+    padding: 0px;
+    margin-bottom: 18px;
+  }
+  .card-image {
+    width: 55%;
+    height: 160px;
+    border-radius: 6px;
+    margin-right: 15px;
+  }
+}
+
+@media screen and (min-width: 567px) and (max-width: 900px) {
+  .each-food-card-container {
+    width: 48%;
+    padding: 0px;
+    margin-bottom: 18px;
+  }
+  .card-image {
+    width: 55%;
+    height: 160px;
+    border-radius: 6px;
+    margin-right: 15px;
+  }
+}
+@media screen and (max-width: 567px) {
+  .each-food-card-container {
+    width: 100%;
+    padding: 0px;
+    margin-bottom: 18px;
+  }
+  .card-image {
+    width: 55%;
+    height: 160px;
+    border-radius: 6px;
+    margin-right: 15px;
+  }
+}

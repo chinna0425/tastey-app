@@ -1,0 +1,14 @@
+.slick-container {
+  width: 90%;
+}
+.slider-setting {
+  width: 90%;
+  display: flex;
+  justify-content: center;
+}
+.loader-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 250px;
+}

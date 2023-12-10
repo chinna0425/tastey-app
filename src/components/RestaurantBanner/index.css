@@ -1,0 +1,82 @@
+.restaurant-banner {
+  width: 100%;
+  background-color: #333333;
+  display: flex;
+  justify-content: center;
+}
+.inner-banner-container {
+  width: 90%;
+  display: flex;
+  align-items: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.each-restau-banner-image {
+  width: 25%;
+  height: 200px;
+  border-radius: 6px;
+  margin-right: 20px;
+}
+.each-banner-heading {
+  font-family: 'Roboto';
+  font-size: 32px;
+  font-weight: 500;
+  color: #ffffff;
+}
+.each-banner-para {
+  font-family: 'Roboto';
+  font-size: 16px;
+  font-weight: 400;
+  color: #ffffff;
+}
+.banner-rating-container {
+  display: flex;
+  align-items: center;
+}
+.banner-rating-star {
+  color: #ffffff;
+  margin-right: 5px;
+}
+.banner-ratings-cost-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.banner-line {
+  height: 50px;
+  width: 2px;
+  background-color: #ffffff;
+  margin-right: 65px;
+  margin-left: 65px;
+  margin-top: 2px;
+  border: 1px solid #ffffff;
+}
+.para-extra-style {
+  margin-top: 5px;
+}
+@media screen and (max-width: 567px) {
+  .inner-banner-container {
+    padding: 0px;
+    width: 100%;
+  }
+  .each-restau-banner-image {
+    width: 25%;
+    border-radius: 6px;
+    margin-right: 20px;
+  }
+  .each-banner-heading {
+    font-size: 20px;
+  }
+  .each-banner-para {
+    font-size: 15px;
+  }
+  .banner-line {
+    height: 50px;
+    width: 2px;
+    background-color: #ffffff;
+    margin-right: 25px;
+    margin-left: 25px;
+    margin-top: 2px;
+    border: 1px solid #ffffff;
+  }
+}

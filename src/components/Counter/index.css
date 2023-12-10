@@ -1,0 +1,37 @@
+.counter-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+.counter-inc-dec-style {
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0px;
+  border: 2px solid #334155;
+  color: #334155;
+  cursor: pointer;
+  outline: none;
+  margin-left: 8px;
+  margin-right: 8px;
+}
+.counter-numbers {
+  display: flex;
+  align-items: center;
+}
+.span-ele-style {
+  font-family: 'Bree Serif';
+  font-size: 24px;
+  font-weight: 500;
+  color: #f7931e;
+}
+@media screen and (max-width: 567px) {
+  .counter-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
+}

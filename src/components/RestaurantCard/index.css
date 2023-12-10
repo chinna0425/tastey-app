@@ -1,0 +1,108 @@
+.card-link-style {
+  text-decoration: none;
+  color: #334155;
+  transform: scaleY(1);
+}
+.restaurant-card-item {
+  display: flex;
+  padding: 5px;
+  margin-bottom: 5px;
+  align-items: center;
+  width: 380px;
+}
+.card-item-image {
+  width: 48%;
+  height: 115px;
+  border-radius: 4px;
+  margin-right: 10px;
+}
+.text-container {
+  width: 52%;
+}
+.card-item-title {
+  font-family: 'Roboto';
+  font-size: 16px;
+  font-weight: 700;
+  color: #334155;
+}
+.card-item-cuisine {
+  font-size: 16px;
+  font-weight: 400;
+  font-family: 'Roboto';
+  margin-bottom: 0px;
+  color: #64748b;
+}
+.card-rating-container {
+  display: flex;
+  align-items: center;
+  margin-top: 0px;
+}
+.card-item-icon-rating {
+  color: #ffcc00;
+  height: 20px;
+  width: 20px;
+  margin-right: 5px;
+  margin-top: 0px;
+}
+.card-item-rating {
+  font-family: 'Roboto';
+  font-size: 18px;
+  font-weight: 600;
+}
+.card-span-element {
+  color: #64748b;
+  font-weight: 400;
+}
+.card-link-style:hover {
+  transform: scaleY(1.03);
+}
+@media screen and (max-width: 567px) {
+  .card-link-style {
+    width: 100%;
+  }
+  .restaurant-card-item {
+    width: 100%;
+    padding: 0px;
+    margin-bottom: 12px;
+  }
+}
+
+@media screen and (min-width: 900px) and (max-width: 1260px) {
+  .card-link-style {
+    width: 46%;
+    margin-bottom: 12px;
+  }
+  .restaurant-card-item {
+    width: 100%;
+    padding: 0px;
+  }
+}
+
+@media screen and (min-width: 567px) and (max-width: 885px) {
+  .card-link-style {
+    width: 49%;
+    margin-bottom: 12px;
+  }
+  .restaurant-card-item {
+    width: 95%;
+    padding: 0px;
+  }
+  .card-item-title {
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+  .card-item-cuisine {
+    font-size: 15px;
+    margin-top: 7px;
+    color: #64748b;
+  }
+  .card-item-rating {
+    font-family: 'Roboto';
+    font-size: 16px;
+    font-weight: 600;
+  }
+  .card-span-element {
+    color: #64748b;
+    font-weight: 400;
+  }
+}

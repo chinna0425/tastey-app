@@ -202,9 +202,13 @@ class Home extends Component {
                     onChange={this.onSearchInput}
                     onKeyDown={this.onSearchKeySubmit}
                   />
-                  <span className="search-buttons-style">
-                    <BsSearch onClick={this.onSearchSubmit} />
-                  </span>
+                  <button
+                    type="button"
+                    onClick={this.onSearchSubmit}
+                    className="search-buttons-style"
+                  >
+                    <BsSearch aria-label="search-icon" />
+                  </button>
                 </div>
                 <div className="sort-right-container">
                   <MdOutlineSort className="sort-icon-style" />

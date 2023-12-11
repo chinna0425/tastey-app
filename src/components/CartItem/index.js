@@ -42,7 +42,10 @@ const CartItem = props => {
                   key={id}
                   onClick={onDecrementCount}
                 >
-                  <GrFormSubtract className="add-sub-icons" />
+                  <GrFormSubtract
+                    aria-label="substract"
+                    className="add-sub-icons"
+                  />
                 </button>
                 <span className="quantity-style">{quantity}</span>
                 <button
@@ -50,7 +53,7 @@ const CartItem = props => {
                   onClick={onIncrementCount}
                   className="add-increment-decrement"
                 >
-                  <AiOutlinePlus className="add-sub-icons" />
+                  <AiOutlinePlus aria-label="plus" className="add-sub-icons" />
                 </button>
               </div>
               <p className="cartitem-bill">

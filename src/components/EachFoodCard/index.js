@@ -60,20 +60,28 @@ class EachFoodCard extends Component {
                 </p>
                 {active ? (
                   <div className="increment-decrement-container">
-                    <span className="add-increment-decrement">
+                    <button
+                      type="button"
+                      onClick={onDecrementCount}
+                      key={id}
+                      className="add-increment-decrement"
+                    >
                       <GrFormSubtract
-                        onClick={onDecrementCount}
-                        key={id}
+                        aria-label="form-substract"
                         className="add-sub-icons"
                       />
-                    </span>
+                    </button>
                     <span className="quantity-style">{quantity}</span>
-                    <span className="add-increment-decrement">
+                    <button
+                      type="button"
+                      onClick={onIncrementCount}
+                      className="add-increment-decrement"
+                    >
                       <AiOutlinePlus
-                        onClick={onIncrementCount}
+                        aria-label="form-plus"
                         className="add-sub-icons"
                       />
-                    </span>
+                    </button>
                   </div>
                 ) : (
                   <button

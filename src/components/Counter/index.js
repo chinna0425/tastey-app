@@ -62,17 +62,25 @@ class Counter extends Component {
 
     return (
       <div className="counter-container">
-        <span className="counter-inc-dec-style">
-          <FaLessThan onClick={this.onDecrement} />
-        </span>
+        <button
+          type="button"
+          onClick={this.onDecrement}
+          className="counter-inc-dec-style"
+        >
+          <FaLessThan aria-label="lessthan" />
+        </button>
         <div className="counter-numbers">
           <span className="span-ele-style">
             {activePage} of <span className="span-ele-style">{finalPage}</span>
           </span>
         </div>
-        <span className="counter-inc-dec-style">
-          <FaGreaterThan onClick={this.onIncrement} />
-        </span>
+        <button
+          type="button"
+          className="counter-inc-dec-style"
+          onClick={this.onIncrement}
+        >
+          <FaGreaterThan aria-label="greater" />
+        </button>
       </div>
     )
   }

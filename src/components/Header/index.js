@@ -10,7 +10,7 @@ import './index.css'
 const HeaderNavbar = props => (
   <ContextData.Consumer>
     {value => {
-      const {activePage, isActive, hamburgerActive, hamburgerOpen} = value
+      const {activePage, isActive, hambergerActive, hambergerOpen} = value
       const onLogOutPage = () => {
         const {history} = props
         Cookies.remove('jwt_token')
@@ -22,11 +22,11 @@ const HeaderNavbar = props => (
       const changePageCart = () => {
         activePage({status: 'CART'})
       }
-      const onHamburgerOpen = () => {
-        hamburgerOpen({open: true})
+      const onHambrgerOpen = () => {
+        hambergerOpen({open: true})
       }
-      const onHamburgerClose = () => {
-        hamburgerOpen({open: false})
+      const onHambrgerClose = () => {
+        hambergerOpen({open: false})
       }
 
       return (
@@ -93,10 +93,10 @@ const HeaderNavbar = props => (
               </Popup>
             </div>
             <div className="mobile-header-ham-berger">
-              <FaBars className="list-opener" onClick={onHamburgerOpen} />
+              <FaBars className="list-opener" onClick={onHambrgerOpen} />
             </div>
           </div>
-          {hamburgerActive && (
+          {hambergerActive && (
             <div className="mobile-header-nav-items">
               <Link
                 to="/"
@@ -149,7 +149,7 @@ const HeaderNavbar = props => (
               </Popup>
               <AiFillCloseCircle
                 className="list-closer"
-                onClick={onHamburgerClose}
+                onClick={onHambrgerClose}
               />
             </div>
           )}

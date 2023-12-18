@@ -36,6 +36,23 @@ class LoginPage extends Component {
     }
   }
 
+  onGuestAccount = async () => {
+    const username = 'rahul'
+    const password = 'rahul@2021'
+    const userDetails = {username, password}
+    const options = {
+      method: 'POST',
+      body: JSON.stringify(userDetails),
+    }
+    const resp = await fetch('https://apis.ccbp.in/login', options)
+    const res = await resp.json()
+    const jwt = {jwtToken: res.jwt_token}
+    Cookies.set('jwt_token', jwt.jwtToken, {expires: 30})
+    const {history} = this.props
+    this.setState({username: '', password: '', errorText: ''})
+    history.replace('/')
+  }
+
   render() {
     const {username, password, errorText} = this.state
     const jwt = Cookies.get('jwt_token')
@@ -85,6 +102,14 @@ class LoginPage extends Component {
               )}
               <button type="submit" className="login-button">
                 Login
+              </button>
+              <br />
+              <button
+                onClick={this.onGuestAccount}
+                type="button"
+                className="login-button"
+              >
+                Guest
               </button>
             </form>
           </div>

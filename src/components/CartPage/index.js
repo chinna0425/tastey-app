@@ -53,9 +53,14 @@ class CartPage extends Component {
     return (
       <ContextData.Consumer>
         {value => {
-          const {cartData, onDeleteCartItem} = value
+          const {cartData, onDeleteCartItem, activePage} = value
           const removeFromCart = () => {
             onDeleteCartItem()
+          }
+          const goToHomePage = () => {
+            activePage({status: 'HOME'})
+            const {history} = this.props
+            history.replace('/')
           }
           return (
             <>
@@ -96,11 +101,13 @@ class CartPage extends Component {
                     <p className="cart-empty-para">
                       Your cart is empty Add something from the menu.
                     </p>
-                    <Link to="/">
-                      <button type="button" className="place-order-style">
-                        Order now
-                      </button>
-                    </Link>
+                    <button
+                      type="button"
+                      onClick={goToHomePage}
+                      className="place-order-style"
+                    >
+                      Order now
+                    </button>
                   </div>
                 </div>
               )}

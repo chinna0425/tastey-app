@@ -13,6 +13,7 @@ const HeaderNavbar = props => (
       const {activePage, isActive, hambergerActive, hambergerOpen} = value
       const onLogOutPage = () => {
         const {history} = props
+        hambergerOpen({open: false})
         Cookies.remove('jwt_token')
         history.replace('/login')
       }

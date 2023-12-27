@@ -10,5 +10,6 @@ const ContextData = React.createContext({
   hambergerOpen: () => {},
   hambergerActive: false,
   onDeleteCartItem: () => {},
+  onDeleteEachCartItem: () => {},
 })
 export default ContextData

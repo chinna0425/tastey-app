@@ -8,7 +8,7 @@ import CartPage from './components/CartPage'
 import ConfirmOrder from './components/ConfirmOrder'
 import ContextData from './ContextData'
 import ProtectedRoute from './components/ProtectedRoute'
-import NotFoundpage from './components/NotFoundPage'
+import NotFoundPage from './components/NotFoundPage'
 import './App.css'
 
 const ir = localStorage.getItem('cartItems')
@@ -102,6 +102,13 @@ class App extends Component {
     }
   }
 
+  onDeleteEachCartItem = data => {
+    const {cartData} = this.state
+    const extractData = cartData.filter(eachDel => eachDel.id !== data.id)
+    this.setState({cartData: extractData})
+    this.addToLocalStorage(extractData)
+  }
+
   render() {
     const {cartData, active, hambergerActive} = this.state
     return (
@@ -116,6 +123,7 @@ class App extends Component {
           hambergerOpen: this.hambergerOpen,
           hambergerActive,
           onDeleteCartItem: this.onDeleteCartItem,
+          onDeleteEachCartItem: this.onDeleteEachCartItem,
         }}
       >
         <Switch>
@@ -128,7 +136,7 @@ class App extends Component {
           />
           <ProtectedRoute exact path="/cart" component={CartPage} />
           <ProtectedRoute exact path="/orderconfirm" component={ConfirmOrder} />
-          <Route exact path="/not-found" component={NotFoundpage} />
+          <Route exact path="/not-found" component={NotFoundPage} />
           <Redirect to="/not-found" />
         </Switch>
       </ContextData.Provider>

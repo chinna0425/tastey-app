@@ -1,5 +1,6 @@
 import {GrFormSubtract} from 'react-icons/gr'
 import {AiOutlinePlus} from 'react-icons/ai'
+import {MdDelete} from 'react-icons/md'
 import {BiRupee} from 'react-icons/bi'
 import './index.css'
 import ContextData from '../../ContextData'
@@ -10,7 +11,11 @@ const CartItem = props => {
   return (
     <ContextData.Consumer>
       {value => {
-        const {onIncrementQuantity, onDecrementQuantity} = value
+        const {
+          onIncrementQuantity,
+          onDecrementQuantity,
+          onDeleteEachCartItem,
+        } = value
 
         const onIncrementCount = () => {
           onIncrementQuantity({id})
@@ -19,6 +24,11 @@ const CartItem = props => {
         const onDecrementCount = () => {
           onDecrementQuantity({id})
         }
+
+        const onDeleteEachItem = () => {
+          onDeleteEachCartItem({id})
+        }
+
         return (
           <li className="cart-item-flex-each">
             <div className="mobile-cart-image-container">
@@ -61,6 +71,14 @@ const CartItem = props => {
                 {cost * quantity}.00
               </p>
             </div>
+            <button
+              className="delete-button-cross"
+              type="button"
+              onClick={onDeleteEachItem}
+              aria-label="delete-icon"
+            >
+              <MdDelete />
+            </button>
           </li>
         )
       }}

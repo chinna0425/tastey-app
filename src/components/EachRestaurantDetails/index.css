@@ -1,0 +1,32 @@
+.each-restaurant-container {
+  height: 92vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-y: scroll;
+}
+.each-restaurant-loader-container {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.each-restau-unorder-list {
+  width: 90%;
+  padding: 0px;
+  display: flex;
+  flex-wrap: wrap;
+}
+.each-restaurant-data-notfound-container {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 20px;
+}
+@media screen and (max-width: 567px) {
+  .each-restaurant-container {
+    height: 85vh;
+  }
+}

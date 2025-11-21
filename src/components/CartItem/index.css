@@ -1,0 +1,122 @@
+.cart-item-flex-each {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.cart-item-flex-inner-each {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  /* align-items: center; */
+}
+.cart-item-image-text {
+  display: flex;
+  width: 33%;
+  align-items: center;
+}
+.cart-image-container {
+  width: 60%;
+  margin-right: 15px;
+}
+.cart-item-image {
+  width: 100%;
+  height: 130px;
+  border-radius: 4px;
+}
+.cart-item-title-style {
+  font-family: 'Roboto';
+  font-size: 22px;
+  font-weight: 600;
+  color: #183b56;
+  width: 40%;
+}
+.cart-items-button-set {
+  width: 33%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.quantity-style {
+  margin-left: 5px;
+  margin-right: 5px;
+  font-family: 'Roboto';
+  font-weight: 500;
+  font-size: 18px;
+}
+.cartitem-bill {
+  width: 33%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Roboto';
+  font-size: 16px;
+  font-weight: 500;
+  color: #ffa412;
+}
+.mobile-cart-image-container {
+  display: none;
+}
+.delete-button-cross {
+  background-color: transparent;
+  border-width: 0px;
+  cursor: pointer;
+  outline: none;
+  font-size: 24px;
+}
+@media screen and (max-width: 700px) {
+  .cart-item-flex-each {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 20px;
+  }
+  .cart-item-flex-inner-each {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+  }
+  .mobile-cart-image-container {
+    display: flex;
+    width: 50%;
+    margin-right: 15px;
+  }
+  .mobile-cart-item-image {
+    width: 100%;
+    height: 130px;
+    border-radius: 4px;
+  }
+  .cart-image-container {
+    display: none;
+  }
+  .cart-items-button-set {
+    align-items: center;
+    justify-content: flex-start;
+  }
+  .cartitem-bill {
+    justify-content: flex-start;
+  }
+  .cart-item-title-style {
+    font-size: 18px;
+    font-weight: 600;
+  }
+  .cart-item-image-text {
+    width: 100%;
+  }
+  .cart-items-button-set {
+    width: 100%;
+    justify-content: flex-start;
+  }
+  .cartitem-bill {
+    width: 100%;
+    font-size: 22px;
+    font-weight: 600;
+    color: #ffa412;
+    margin-top: 15px;
+    justify-content: flex-start;
+    margin-left: 0px;
+  }
+}
